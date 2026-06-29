@@ -1,0 +1,6 @@
+﻿namespace LazyBlogs_.Models
+{
+    public class Comment
+    {
+    }
+}

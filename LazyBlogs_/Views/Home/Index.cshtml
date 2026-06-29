@@ -1,8 +1,410 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "LazyBlogging_ — Read. Write. Vibe.";
 }
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="lb-hero" id="hero">
+        <div class="lb-hero__noise"></div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        <div class="lb-hero__body container">
+            <div class="lb-hero__eyebrow">Free forever &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; No plans</div>
+            <h1 class="lb-hero__headline">
+                Where good writing<br />
+                <span class="lb-hero__accent">finds its people.</span>
+            </h1>
+            <p class="lb-hero__sub">
+                Read blogs that actually matter. Follow writers you love.
+                Publish your own stories when you're ready — no gatekeeping, no fee.
+            </p>
+            <div class="lb-hero__cta">
+                <a href="/Account/Register" class="lb-btn lb-btn--primary lb-btn--lg">Start reading free</a>
+                <a href="#how" class="lb-btn lb-btn--outline lb-btn--lg">See how it works</a>
+            </div>
+
+            <div class="lb-hero__stats">
+                <div class="lb-stat">
+                    <span class="lb-stat__num">100%</span>
+                    <span class="lb-stat__label">Free, always</span>
+                </div>
+                <div class="lb-stat__divider"></div>
+                <div class="lb-stat">
+                    <span class="lb-stat__num">3 roles</span>
+                    <span class="lb-stat__label">Reader · Editor · Admin</span>
+                </div>
+                <div class="lb-stat__divider"></div>
+                <div class="lb-stat">
+                    <span class="lb-stat__num">Open</span>
+                    <span class="lb-stat__label">Anyone can join</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="lb-hero__scroll-hint">
+            <span>Scroll to explore</span>
+            <i class="fa-solid fa-chevron-down lb-bounce"></i>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MARQUEE STRIP
+    ═══════════════════════════════════════════ -->
+    <div class="lb-marquee-wrap" aria-hidden="true">
+        <div class="lb-marquee">
+            <span>Read</span><span class="lb-dot">·</span>
+            <span>Discover</span><span class="lb-dot">·</span>
+            <span>Write</span><span class="lb-dot">·</span>
+            <span>Follow</span><span class="lb-dot">·</span>
+            <span>React</span><span class="lb-dot">·</span>
+            <span>Bookmark</span><span class="lb-dot">·</span>
+            <span>Explore</span><span class="lb-dot">·</span>
+            <span>Publish</span><span class="lb-dot">·</span>
+            <span>Connect</span><span class="lb-dot">·</span>
+            <span>Series</span><span class="lb-dot">·</span>
+            <span>Trending</span><span class="lb-dot">·</span>
+            <span>Dark Mode</span><span class="lb-dot">·</span>
+            <!-- duplicate for seamless loop -->
+            <span>Read</span><span class="lb-dot">·</span>
+            <span>Discover</span><span class="lb-dot">·</span>
+            <span>Write</span><span class="lb-dot">·</span>
+            <span>Follow</span><span class="lb-dot">·</span>
+            <span>React</span><span class="lb-dot">·</span>
+            <span>Bookmark</span><span class="lb-dot">·</span>
+            <span>Explore</span><span class="lb-dot">·</span>
+            <span>Publish</span><span class="lb-dot">·</span>
+            <span>Connect</span><span class="lb-dot">·</span>
+            <span>Series</span><span class="lb-dot">·</span>
+            <span>Trending</span><span class="lb-dot">·</span>
+            <span>Dark Mode</span><span class="lb-dot">·</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         HOW IT WORKS  (sticky-scroll panels)
+    ═══════════════════════════════════════════ -->
+    <section class="lb-how" id="how">
+        <div class="container">
+            <div class="lb-section-label">How it works</div>
+            <h2 class="lb-section-title">Three steps.<br />Zero barriers.</h2>
+        </div>
+
+        <div class="lb-sticky-wrap">
+
+            <!-- Step 1 -->
+            <div class="lb-sticky-panel" data-panel="1">
+                <div class="lb-sticky-panel__left">
+                    <div class="lb-step-number">01</div>
+                    <h3 class="lb-step-title">Create your free account</h3>
+                    <p class="lb-step-body">
+                        Sign up with your email. We send a quick verification link —
+                        click it and you're in. No credit card. No subscription.
+                        No hidden tier waiting to lock you out.
+                    </p>
+                    <a href="/Account/Register" class="lb-btn lb-btn--primary mt-3">Join for free</a>
+                </div>
+                <div class="lb-sticky-panel__right">
+                    <div class="lb-mock lb-mock--register">
+                        <div class="lb-mock__bar">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="lb-mock__body">
+                            <div class="lb-mock__logo">LazyBlogging_</div>
+                            <div class="lb-mock__field">
+                                <label>Full name</label>
+                                <div class="lb-mock__input">Ali Hassan</div>
+                            </div>
+                            <div class="lb-mock__field">
+                                <label>Email</label>
+                                <div class="lb-mock__input">ali@example.com</div>
+                            </div>
+                            <div class="lb-mock__field">
+                                <label>Password</label>
+                                <div class="lb-mock__input lb-mock__input--pw">••••••••••</div>
+                            </div>
+                            <div class="lb-mock__cta">Create account →</div>
+                            <div class="lb-mock__fine">Already have one? <u>Sign in</u></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="lb-sticky-panel" data-panel="2">
+                <div class="lb-sticky-panel__left">
+                    <div class="lb-step-number">02</div>
+                    <h3 class="lb-step-title">Explore what's out there</h3>
+                    <p class="lb-step-body">
+                        Browse by category, search any topic, or let trending posts
+                        guide you. Bookmark what you want to save. Pick up exactly
+                        where you left off — even mid-article.
+                    </p>
+                    <ul class="lb-step-list">
+                        <li><i class="fa-solid fa-magnifying-glass"></i> Search any topic</li>
+                        <li><i class="fa-solid fa-filter"></i> Filter by category, latest, most liked</li>
+                        <li><i class="fa-solid fa-bookmark"></i> Save to Read Later</li>
+                        <li><i class="fa-solid fa-rotate-right"></i> Resume where you left off</li>
+                    </ul>
+                </div>
+                <div class="lb-sticky-panel__right">
+                    <div class="lb-mock lb-mock--feed">
+                        <div class="lb-mock__bar"><span></span><span></span><span></span></div>
+                        <div class="lb-mock__body lb-mock__body--feed">
+                            <div class="lb-mock__search-bar">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>Search blogs…</span>
+                            </div>
+                            <div class="lb-mock__tags">
+                                <span class="lb-tag lb-tag--active">Trending</span>
+                                <span class="lb-tag">Tech</span>
+                                <span class="lb-tag">Design</span>
+                                <span class="lb-tag">Life</span>
+                            </div>
+                            <div class="lb-mock__card">
+                                <div class="lb-mock__card-meta">Tech · 4 min read</div>
+                                <div class="lb-mock__card-title">Why I deleted my social media and felt nothing</div>
+                                <div class="lb-mock__card-foot">
+                                    <span><i class="fa-solid fa-heart"></i> 214</span>
+                                    <span><i class="fa-solid fa-bookmark"></i></span>
+                                </div>
+                            </div>
+                            <div class="lb-mock__card lb-mock__card--muted">
+                                <div class="lb-mock__card-meta">Life · 7 min read</div>
+                                <div class="lb-mock__card-title">The quiet power of doing less, intentionally</div>
+                                <div class="lb-mock__card-foot">
+                                    <span><i class="fa-solid fa-heart"></i> 98</span>
+                                    <span><i class="fa-solid fa-bookmark"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="lb-sticky-panel" data-panel="3">
+                <div class="lb-sticky-panel__left">
+                    <div class="lb-step-number">03</div>
+                    <h3 class="lb-step-title">Become a writer when you're ready</h3>
+                    <p class="lb-step-body">
+                        Apply to become an Editor. Once approved, you get a full
+                        rich-text editor with inline images, headings, links, and
+                        drafts. Write alone or build a blog series — your pace, your rules.
+                    </p>
+                    <ul class="lb-step-list">
+                        <li><i class="fa-solid fa-pen-nib"></i> Rich editor with inline images</li>
+                        <li><i class="fa-solid fa-layer-group"></i> Publish as a series</li>
+                        <li><i class="fa-solid fa-floppy-disk"></i> Save drafts, publish when ready</li>
+                        <li><i class="fa-solid fa-comments"></i> Reply directly to your readers</li>
+                    </ul>
+                </div>
+                <div class="lb-sticky-panel__right">
+                    <div class="lb-mock lb-mock--editor">
+                        <div class="lb-mock__bar"><span></span><span></span><span></span></div>
+                        <div class="lb-mock__body lb-mock__body--editor">
+                            <div class="lb-mock__editor-toolbar">
+                                <span><strong>B</strong></span>
+                                <span><em>I</em></span>
+                                <span>H1</span>
+                                <span>H2</span>
+                                <span><i class="fa-solid fa-link"></i></span>
+                                <span><i class="fa-solid fa-image"></i></span>
+                                <span class="lb-mock__toolbar-divider"></span>
+                                <span class="lb-mock__draft-btn">Save draft</span>
+                            </div>
+                            <div class="lb-mock__editor-title">Why lazy thinking is the future of —</div>
+                            <div class="lb-mock__editor-body">
+                                <div class="lb-mock__line lb-mock__line--full"></div>
+                                <div class="lb-mock__line lb-mock__line--full"></div>
+                                <div class="lb-mock__line lb-mock__line--75"></div>
+                                <div class="lb-mock__img-placeholder">
+                                    <i class="fa-solid fa-image"></i>
+                                    <span>Inline image</span>
+                                </div>
+                                <div class="lb-mock__line lb-mock__line--full"></div>
+                                <div class="lb-mock__line lb-mock__line--50"></div>
+                            </div>
+                            <div class="lb-mock__editor-foot">
+                                <span class="lb-mock__word-count">312 words</span>
+                                <span class="lb-mock__publish-btn">Publish →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FEATURES GRID
+    ═══════════════════════════════════════════ -->
+    <section class="lb-features" id="features">
+        <div class="container">
+            <div class="lb-section-label">Everything included</div>
+            <h2 class="lb-section-title">Built for readers.<br />Built for writers.</h2>
+
+            <div class="lb-features__grid">
+
+                <div class="lb-feature-card lb-feature-card--wide">
+                    <i class="fa-solid fa-face-smile lb-feature-card__icon"></i>
+                    <h4>React beyond a like</h4>
+                    <p>Express how a blog made you feel — love it, mind blown, laughing, inspired — with emoji reactions alongside classic likes.</p>
+                </div>
+
+                <div class="lb-feature-card">
+                    <i class="fa-solid fa-bell lb-feature-card__icon"></i>
+                    <h4>Follow & get notified</h4>
+                    <p>Follow writers you love. Get a notification the moment they publish something new.</p>
+                </div>
+
+                <div class="lb-feature-card">
+                    <i class="fa-solid fa-list-ol lb-feature-card__icon"></i>
+                    <h4>Blog series</h4>
+                    <p>Editors can group posts into a series — Part 1, 2, 3 — so readers can follow a story from start to finish.</p>
+                </div>
+
+                <div class="lb-feature-card">
+                    <i class="fa-solid fa-rotate-right lb-feature-card__icon"></i>
+                    <h4>Resume reading</h4>
+                    <p>Scroll position is remembered. Come back to a long post days later and pick up exactly where you stopped.</p>
+                </div>
+
+                <div class="lb-feature-card">
+                    <i class="fa-solid fa-bookmark lb-feature-card__icon"></i>
+                    <h4>Read later</h4>
+                    <p>Save any post to your personal list. Read it on the train, in the evening — whenever suits you.</p>
+                </div>
+
+                <div class="lb-feature-card lb-feature-card--wide lb-feature-card--dark">
+                    <i class="fa-solid fa-moon lb-feature-card__icon"></i>
+                    <h4>Dark mode included</h4>
+                    <p>Every page, every component adapts. Your eyes deserve it, especially for late-night reading sessions.</p>
+                </div>
+
+                <div class="lb-feature-card">
+                    <i class="fa-solid fa-fire lb-feature-card__icon"></i>
+                    <h4>Trending & discovery</h4>
+                    <p>Filter by latest, most liked, or trending. Find what's catching fire right now or deep-dive a category.</p>
+                </div>
+
+                <div class="lb-feature-card">
+                    <i class="fa-solid fa-trophy lb-feature-card__icon"></i>
+                    <h4>Writing competitions</h4>
+                    <p>Admins host writing contests inside the platform. Compete, get noticed, build your reputation.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ROLES — WHO IS THIS FOR
+    ═══════════════════════════════════════════ -->
+    <section class="lb-roles" id="roles">
+        <div class="container">
+            <div class="lb-section-label">Pick your role</div>
+            <h2 class="lb-section-title">Everyone gets something real.</h2>
+            <p class="lb-section-sub">
+                Register once. Your role unlocks what you can do.
+                Readers can always apply to become Editors — no gatekeeping.
+            </p>
+
+            <div class="lb-roles__grid">
+
+                <div class="lb-role-card" data-role="reader">
+                    <div class="lb-role-card__icon-wrap">
+                        <i class="fa-solid fa-glasses"></i>
+                    </div>
+                    <h3>Reader</h3>
+                    <p class="lb-role-card__tagline">Your corner of the internet, curated by you.</p>
+                    <ul class="lb-role-card__list">
+                        <li>Read any blog on the platform</li>
+                        <li>Comment and react with emojis</li>
+                        <li>Follow your favourite editors</li>
+                        <li>Bookmark posts for later</li>
+                        <li>Resume reading where you left off</li>
+                        <li>Search and filter by category</li>
+                        <li>Get notified on new posts</li>
+                    </ul>
+                    <a href="/Account/Register" class="lb-btn lb-btn--outline lb-btn--block mt-3">Join as reader</a>
+                </div>
+
+                <div class="lb-role-card lb-role-card--featured" data-role="editor">
+                    <div class="lb-role-card__badge">Most popular</div>
+                    <div class="lb-role-card__icon-wrap">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3>Editor</h3>
+                    <p class="lb-role-card__tagline">Your voice. Your audience. No rent.</p>
+                    <ul class="lb-role-card__list">
+                        <li>Everything Readers get</li>
+                        <li>Rich text editor with inline images</li>
+                        <li>Publish, edit, or delete blogs</li>
+                        <li>Save and manage drafts</li>
+                        <li>Build blog series</li>
+                        <li>Reply to reader comments</li>
+                        <li>See your post analytics</li>
+                    </ul>
+                    <a href="/Account/Register" class="lb-btn lb-btn--primary lb-btn--block mt-3">Start writing free</a>
+                </div>
+
+                <div class="lb-role-card" data-role="admin">
+                    <div class="lb-role-card__icon-wrap">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Admin</h3>
+                    <p class="lb-role-card__tagline">Keep the platform healthy and thriving.</p>
+                    <ul class="lb-role-card__list">
+                        <li>Everything Editors get</li>
+                        <li>Assign and manage user roles</li>
+                        <li>Suspend or block accounts</li>
+                        <li>Edit or remove any blog</li>
+                        <li>Send platform-wide emails</li>
+                        <li>Host writing competitions</li>
+                        <li>View registered users</li>
+                    </ul>
+                    <span class="lb-role-card__note">Assigned by existing admin</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SOCIAL PROOF / QUOTE STRIP
+    ═══════════════════════════════════════════ -->
+    <section class="lb-quotes">
+        <div class="container">
+            <div class="lb-quotes__grid">
+                <blockquote class="lb-quote">
+                    <p>"Finally a blogging platform where I don't feel like I need to build an audience before I'm allowed to write."</p>
+                    <cite>— Sana M., reader turned editor</cite>
+                </blockquote>
+                <blockquote class="lb-quote">
+                    <p>"The editor is clean and the inline images make my tutorials actually make sense. No fiddling around."</p>
+                    <cite>— Usman K., tech writer</cite>
+                </blockquote>
+                <blockquote class="lb-quote">
+                    <p>"Dark mode, bookmark position, emoji reactions — someone actually thought about the reading experience here."</p>
+                    <cite>— Aiza R., avid reader</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════════ -->
+    <section class="lb-cta-final">
+        <div class="container text-center">
+            <h2 class="lb-cta-final__title">
+                Read more.<br />Write more.<br />
+                <span class="lb-hero__accent">Worry less.</span>
+            </h2>
+            <p class="lb-cta-final__sub">
+                No plans. No paywalls. Register, verify your email, and you're home.
+            </p>
+            <a href="/Account/Register" class="lb-btn lb-btn--primary lb-btn--lg">Create your free account</a>
+        </div>
+    </section>
+    

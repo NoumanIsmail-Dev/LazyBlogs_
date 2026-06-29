@@ -1,50 +1,112 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LazyBlogs_</title>
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="A free platform to read great blogs, follow your favourite writers, and publish your own stories. No paywalls. No plans. Just write." />
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="~/LazyBlogs_.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/landing.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LazyBlogs_</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="lb-nav container-fluid px-4 px-md-5">
+            <a href="#" class="lb-logo">Lazy<span>Blogging</span><em>_</em></a>
+            <div class="lb-nav__actions">
+                <button class="lb-theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="/Account/Login" class="lb-btn lb-btn--ghost">Sign in</a>
+                <a href="/Account/Register" class="lb-btn lb-btn--primary">Get started</a>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    
+    <main role="main">
+        @RenderBody()
+    </main>
 
-    <footer class="border-top footer text-muted">
+    <footer class="lb-footer">
         <div class="container">
-            &copy; 2026 - LazyBlogs_ - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <!-- Main Footer Content -->
+            <div class="lb-footer-grid">
+                <!-- Brand Column -->
+                <div class="lb-footer-brand">
+                    <a class="lb-footer-logo" asp-area="" asp-controller="Home" asp-action="Index">
+                        Lazy<span>Blogging</span><em>_</em>
+                    </a>
+                    <p class="lb-footer-tagline">Read. Write. Vibe. — Free forever.</p>
+                    <div class="lb-footer-social">
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="lb-footer-column">
+                    <h5 class="lb-footer-heading">Platform</h5>
+                    <ul class="lb-footer-links">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Blogs" asp-action="Index">Blogs</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Faqs">FAQs</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Account Column -->
+                <div class="lb-footer-column">
+                    <h5 class="lb-footer-heading">Account</h5>
+                    <ul class="lb-footer-links">
+                        <li><a asp-area="" asp-controller="Account" asp-action="Login">Sign In</a></li>
+                        <li><a asp-area="" asp-controller="Account" asp-action="Register">Create Account</a></li>
+                        <li><a asp-area="" asp-controller="Account" asp-action="ForgotPassword">Forgot Password?</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="lb-footer-newsletter">
+                    <h5 class="lb-footer-heading">Stay in the loop</h5>
+                    <p class="lb-footer-newsletter-text">Get notified when your favourite writers publish.</p>
+                    <form class="lb-footer-form" action="#" method="post">
+                        <div class="lb-footer-form-group">
+                            <input type="email" class="lb-footer-input" placeholder="Enter your email" required />
+                            <button type="submit" class="lb-footer-btn">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="lb-footer-fineprint">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="lb-footer-bottom">
+                <div class="lb-footer-bottom-left">
+                    <span>&copy; @DateTime.Now.Year LazyBlogging_ — All rights reserved.</span>
+                </div>
+                <div class="lb-footer-bottom-right">
+                    <span>Made with <i class="fa-solid fa-heart" style="color: #ff4757;"></i> for writers everywhere</span>
+                    <span class="lb-footer-dot">·</span>
+                    <span>v2.0</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="~/js/landing.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

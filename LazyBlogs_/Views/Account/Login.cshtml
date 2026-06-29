@@ -1,0 +1,105 @@
+﻿@model LazyBlogs_.ViewModels.Account.LoginViewModel
+@{
+    ViewData["Title"] = "Welcome Back — LazyBlogging_";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/landing.css" />
+    <link rel="stylesheet" href="~/css/auth.css" />
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo -->
+            <div class="auth-header">
+                <a href="/" class="auth-logo">Lazy<span>Blogging</span><em>_</em></a>
+                <p class="auth-subtitle">Welcome back to your reading space</p>
+            </div>
+
+            <!-- Login Form -->
+            <form asp-action="Login" method="post" class="auth-form">
+                <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+                <div asp-validation-summary="ModelOnly" class="text-danger auth-error-summary"></div>
+
+                <div class="auth-form-group">
+                    <label asp-for="Email" class="auth-label">
+                        <i class="fa-solid fa-envelope"></i> Email Address
+                    </label>
+                    <input asp-for="Email" class="auth-input" placeholder="you@example.com" />
+                    <span asp-validation-for="Email" class="text-danger auth-error"></span>
+                </div>
+
+                <div class="auth-form-group">
+                    <label asp-for="Password" class="auth-label">
+                        <i class="fa-solid fa-lock"></i> Password
+                    </label>
+                    <div class="auth-password-wrapper">
+                        <input asp-for="Password" class="auth-input" placeholder="Enter your password" />
+                        <button type="button" class="auth-password-toggle" onclick="togglePasswordVisibility(this)">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger auth-error"></span>
+                </div>
+
+                <div class="auth-form-options">
+                    <div class="auth-remember">
+                        <input asp-for="RememberMe" class="auth-checkbox" id="rememberMe" />
+                        <label for="rememberMe" class="auth-checkbox-label">Remember me</label>
+                    </div>
+                    <a href="/Account/ForgotPassword" class="auth-forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="auth-btn auth-btn-primary">
+                    <i class="fa-solid fa-sign-in-alt"></i> Sign In
+                </button>
+
+                <div class="auth-divider">
+                    <span>New to LazyBlogging_?</span>
+                </div>
+
+                <a href="/Account/Register" class="auth-btn auth-btn-outline">
+                    <i class="fa-solid fa-user-plus"></i> Create Free Account
+                </a>
+            </form>
+
+            <!-- Quick Demo Info -->
+            <div class="auth-demo-info">
+                <p class="auth-demo-text">
+                    <i class="fa-solid fa-gem"></i> No credit card required
+                    <span class="auth-dot">·</span>
+                    <i class="fa-solid fa-gem"></i> Join as Reader, become Editor later
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="auth-footer">
+                <p class="auth-footer-text">
+                    <a href="/Home/Privacy">Privacy Policy</a>
+                    <span class="auth-dot">·</span>
+                    <a href="/Home/Terms">Terms</a>
+                    <span class="auth-dot">·</span>
+                    <a href="/Home/Faqs">FAQs</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/auth.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    @* @await RenderSectionAsync("Scripts", required: false) *@
+</body>
+</html>
