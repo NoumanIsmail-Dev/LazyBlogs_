@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 // STEP 1: Register DbContext FIRST
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("connection")));
 
 // STEP 2: Then register Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
